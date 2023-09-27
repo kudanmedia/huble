@@ -5,7 +5,8 @@ const label = cva("label", {
   variants: {
     intent: {
       subHeading: ["text-base", "font-semibold", "leading-7", "text-primary"],
-      heading: ["text-4xl", "font-normal", "tracking-tight", "text-white", "sm:text-6xl"],
+      heading: ["text-4xl", "font-normal", "tracking-tight", "text-white", "sm:text-2xl"],
+      storyheading: ["text-3xl", "font-normal", "tracking-tight", "text-white", "sm:text-1xl"],
       description: ["text-base", "leading-8", "text-white"],
     },
   },

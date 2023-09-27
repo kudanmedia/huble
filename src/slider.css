@@ -1,0 +1,74 @@
+/* Slider container */
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Slider */
+  .slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Slide */
+  .slide {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Active Slide */
+  .slide.active {
+    color: #877b4d; /* Highlighted color */
+  }
+  
+  /* Slide Content */
+  .slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Year */
+  .year {
+    font-size: 18px;
+  }
+  
+  /* Navigation Arrows */
+  .nav-arrows {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-arrows button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 5px 0;
+  }
+  
+  /* Pause Slider on Hover */
+  .slider:hover .slide-content {
+    animation-play-state: paused;
+  }
+  
+  /* Resume Slider on Hover Out */
+  .slider:hover .slide-content:hover {
+    animation-play-state: running;
+  }
+  

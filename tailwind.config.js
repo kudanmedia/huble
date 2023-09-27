@@ -10,6 +10,7 @@ module.exports = {
         secondary: "#333333",
         white: "rgba(255, 255, 255, 1)",
         orange: "rgba(238, 87, 94, 1)",
+        story: "#877b4d",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
