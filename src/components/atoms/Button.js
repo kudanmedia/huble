@@ -11,7 +11,8 @@ const button = cva("button", {
            "font-semibold", 
            "text-white", 
            "shadow-sm", 
-           "hover:bg-primary/80", 
+           "hover:bg-primary/80",
+           "my-6" 
         ],
         secondary: [
           "rounded-full", 
@@ -21,12 +22,13 @@ const button = cva("button", {
            "shadow-sm", 
            "hover:bg-primary/80",
            "outline", "outline-primary",
-           "hover:text-black"
+           "hover:text-black",
+           "my-6"
         ],
       },
       size: {
-        small: ["py-2", "px-4"],
-        medium: ["px-8", "py-4"],
+        small: ["py-2", "px-4", "md:w-auto", "sm:w-auto", "space-y-8"],
+        medium: ["px-8", "py-4", "md:w-auto", "sm:w-auto", "space-y-8"],
       },
     },
     compoundVariants: [{ intent: "primary", size: "medium", class: "uppercase" }],
