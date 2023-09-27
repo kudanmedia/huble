@@ -5,13 +5,20 @@ const Calculator = () => {
   const [result, setResult] = useState(0); // Result of the operation
   const [operator, setOperator] = useState(null); // Selected operator
   const [prevInput, setPrevInput] = useState(''); // Previous input
+  const [inputError, setInputError] = useState(''); // Input validation error message
 
   // Function to handle changes in the input field
   const handleInputChange = (event) => {
     const newValue = event.target.value;
-    setInput(newValue);
-    if (operator && prevInput !== '') {
-      calculateResult(prevInput, newValue, operator);
+    
+    if (!isNaN(newValue) || newValue === '') {
+      setInput(newValue);
+      setInputError('');
+      if (operator && prevInput !== '') {
+        calculateResult(prevInput, newValue, operator);
+      }
+    } else {
+      setInputError('Please enter a valid numeric value.');
     }
   };
 
@@ -27,8 +34,9 @@ const Calculator = () => {
         setPrevInput(input);
       }
 
-      // Clear the input field and set the new operator
+      // Clear the input field, error message and set the new operator
       setInput('');
+      setInputError('');
       setOperator(selectedOperator);
     }
   };
@@ -52,7 +60,7 @@ const Calculator = () => {
           if (inputValue !== 0) {
             setResult(prevInputValue / inputValue);
           } else {
-            alert("Division by zero is not allowed.");
+            setInputError("Division by zero is not allowed.");
             clearCalculator();
           }
           break;
@@ -68,6 +76,7 @@ const Calculator = () => {
     setResult(0);
     setOperator(null);
     setPrevInput('');
+    setInputError('');
   };
 
   return (
@@ -76,6 +85,7 @@ const Calculator = () => {
       <div className="p-20">
       <div className="border-2 border-blue-950 p-10 my-8 place-content-center rounded-lg text-center">
       <input type="text" value={input} onChange={handleInputChange} className="border-blue-950 border-2 p-4"/>
+       {inputError && <div className="error-message">{inputError}</div>}
       <div className="operator-buttons flex gap-x-4 justify-center my-4">
         {['+', '-', '*', '/'].map((op) => (
           <button key={op} onClick={() => handleOperatorClick(op)} className="bg-blue-950 text-white align-middle p-5 text-center">
@@ -87,9 +97,7 @@ const Calculator = () => {
       <div className="border-2 border-blue-950 p-10 my-10 place-content-center rounded-lg text-center text-lg text-blue-950 font-bold">
       <div className="input">{input ? input : prevInput ? prevInput : 0}</div>
       <div className="result">Result: {result}</div>
-      <button onClick={clearCalculator}>Clear</button>
       </div>      
-
     </div>
     </div>
   );

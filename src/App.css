@@ -173,3 +173,7 @@
 .RightSide {
   border-bottom: none;
 }
+
+.error-message {
+  color: red;
+}
