@@ -72,16 +72,25 @@ const Calculator = () => {
 
   return (
     <div className="calculator">
-      <input type="text" value={input} onChange={handleInputChange} />
-      <div className="operator-buttons flex gap-x-4">
+      <div className="bg-blue-950 h-10 w-full"></div>
+      <div className="p-20">
+      <div className="border-2 border-blue-950 p-10 my-8 place-content-center rounded-lg text-center">
+      <input type="text" value={input} onChange={handleInputChange} className="border-blue-950 border-2 p-4"/>
+      <div className="operator-buttons flex gap-x-4 justify-center my-4">
         {['+', '-', '*', '/'].map((op) => (
-          <button key={op} onClick={() => handleOperatorClick(op)} className="bg-blue-950 p-4">
+          <button key={op} onClick={() => handleOperatorClick(op)} className="bg-blue-950 text-white align-middle p-5 text-center">
             {op}
           </button>
         ))}
       </div>
-      <div className="result">{result}</div>
+      </div>  
+      <div className="border-2 border-blue-950 p-10 my-10 place-content-center rounded-lg text-center text-lg text-blue-950 font-bold">
+      <div className="input">{input ? input : prevInput ? prevInput : 0}</div>
+      <div className="result">Result: {result}</div>
       <button onClick={clearCalculator}>Clear</button>
+      </div>      
+
+    </div>
     </div>
   );
 };
