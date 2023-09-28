@@ -84,7 +84,7 @@ const Calculator = () => {
       <div className="bg-blue-950 h-10 w-full"></div>
       <div className="p-20">
       <div className="border-2 border-blue-950 p-10 my-8 place-content-center rounded-lg text-center">
-      <input type="text" value={input} onChange={handleInputChange} className="border-blue-950 border-2 p-4"/>
+      <input type="text" value={input} onChange={handleInputChange} className="border-blue-950 border-2 p-4 sm:w-fit md:w-fit"/>
        {inputError && <div className="error-message">{inputError}</div>}
       <div className="operator-buttons flex gap-x-4 justify-center my-4">
         {['+', '-', '*', '/'].map((op) => (
