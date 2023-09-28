@@ -30,10 +30,16 @@ const Navigation = () => {
             Calculator
           </Link>
           <Link
-            to="/documentation"
+            to="https://github.com/kudanmedia/huble/"
             className="text-primary hover:text-primary/90 transition duration-300"
           >
-            About Me
+            GitHub
+          </Link>
+          <Link
+            to="https://github.com/kudanmedia/huble/blob/master/public/resources/FEA_Kudakwashe_Nyengera.pdf"
+            className="text-primary hover:text-primary/90 transition duration-300"
+          >
+            Download
           </Link>
         </div>
       </div>

@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/documentation",
-        element: <Link to="" />,
+        element: <Link to="https://github.com/kudanmedia/huble/blob/master/public/resources/FEA_Kudakwashe_Nyengera.pdf" />,
       },
     ],
   },
