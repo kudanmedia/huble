@@ -88,7 +88,7 @@ const Calculator = () => {
        {inputError && <div className="error-message">{inputError}</div>}
       <div className="operator-buttons flex gap-x-4 justify-center my-4">
         {['+', '-', '*', '/'].map((op) => (
-          <button key={op} onClick={() => handleOperatorClick(op)} className="bg-blue-950 text-white align-middle p-5 text-center">
+          <button key={op} onClick={() => handleOperatorClick(op)} className="bg-blue-950 text-white align-middle p-5 text-center operator-buttons">
             {op}
           </button>
         ))}

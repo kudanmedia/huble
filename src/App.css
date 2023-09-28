@@ -177,3 +177,7 @@
 .error-message {
   color: red;
 }
+
+.operator-buttons button:active {
+  background-color: rgba(255,90,95,1.0);
+}
