@@ -1,6 +1,6 @@
 # Frontend Software Architect Assessment
 
-Welcome to my Frontend Software Architect assessment repository. This repository contains my solutions for the technical assessment tasks as part of the application process for the Frontend Software Architect role at [Company Name].
+Welcome to my Frontend Software Architect assessment repository. This repository contains my solutions for the technical assessment tasks as part of the application process for the Frontend Software Architect role at Huble.
 
 ## Table of Contents
 
